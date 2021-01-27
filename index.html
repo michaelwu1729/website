@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Michael Wu's Website</title> 
   <link href="images/lul_prof_pic.png" rel="icon" /> 
+  <style></style>
 </head>
 
 <body>
@@ -17,55 +18,64 @@
   </header>
 
   <main>
-    <img src="images/lul_prof_pic.png" alt="error producing image">
+    <img src="images/lul_prof_pic.png" alt="An image of my face is supposed to be here">
     <section id="intro">
-      <h2>About Me</h2>
-      Hello, and welcome to my page! I'm an undergraduate CS student at UCSD. In my free time you'll 
+      <p>Hello, and welcome to my page! I'm an undergraduate CS student at UCSD. In my free time you'll 
       find me out on the tennis court, <del> in the gym </del>, on Twitch, or critiquing boba shops
-      across the Bay Area.
+      across the Bay Area.</p>
+    </section>
 
+    <section id="about-me">
+      <h2>About Me</h2>
+      A few facts about me: <br />
+      <b>Age</b>: 20 <br />
+      <b>Hometown</b>: Bay Area, CA <br /> 
+      <b>Favorite Food</b>: Pho <br />
+      <b>Favorite TV show</b>: Brooklyn 99 <br />
+      <b>Hobbies</b> (pre-pandemic, aside from coding): tennis, gym/exercising, video games <br />
+      <b>Something not many people know about me</b>: I love listening to ASMR to help relax. I use it everyday as my way of meditating.
+
+    <section id="work">
       <h2>My Work</h2>
-      Here are some links to my previous works (almost all of these are software endeavors;
-      but you'll also find some non-software work I thought were cool enough to publish here)
+      <p>Here are some links to my previous works (almost all of these are software endeavors;
+      but you'll also find some non-software work I thought were cool enough to publish here)</p>
       <ul>
+        <li><a href="files/Michael_Wu_Resume_W2021.pdf">My Resume</a></li>
         <li><a href="http://github.com/michaelwu1729/Deep-Learning-Papers/blob/main/RNNs_Caption_Generation.pdf" 
             target="_blank">Deep Learning: RNNs for Generating Image Captions</a> <i>-Dec 2020</i></li>
         <li><a href="http://github.com/michaelwu1729/Deep-Learning-Papers/blob/main/CNNs_Image_Identification.pdf" 
             target="_blank">Deep Learning: CNNs for Image Identification</a> <i>-Nov 2020</i></li>
         <li><a href="dmsp_final">Fixing the Lopsided Money Structure in Professional Tennis</a> <i>-Aug 2019</i></li>
-
       </ul>
+
+      Some of my works are from class projects. I'm working on re-purposing the code to make them more user-interactive and to
+      prevent any potential Academic Integrity violations. They'll be posted above once they're finished.
+    </section>
+
     <section id="links">
       <h2>Social Media</h2>
       Here are some of the places you can find me. Feel free to connect with me!
-      <ul>
-        <li><a href="http://github.com/michaelwu1729/" target="_blank">GitHub</a></li>
-        <li><a href="http://linkedin.com/in/michael-wu-0ba43a173/" target="_blank">LinkedIn</a></li>
-      </ul>
+      <nav>
+        <a href="http://github.com/michaelwu1729/" target="_blank">GitHub</a></li> | 
+        <a href="http://linkedin.com/in/michael-wu-0ba43a173/" target="_blank">LinkedIn</a>
+      </nav>
     </section>
 
     <section id="Fun other sites">
       <h2 color="red">Fun pages</h2> 
-      Here are some fun utility pages I built. Please be patient with these- the functionality for these are still in development!
+      Here are some fun utility pages I built. Please be patient with these; the functionality for these are still in development!
       <ul>
         <li><a href="404">Reasons I'm awesome</a></li>
         <li><a href="garbage">Some fun HTML experiments</a></li>
         <li><a href="calculator">Final Grade Calculator (Incomplete)</a></li>
       </ul>
     </section>
-
   </main>
+
   <footer>
     <hr/>
     <i><b>Designed by Michael Wu</b></i>
   </footer>
-<!--
-  <script type="module">
-          import { update } from './scripts/main.js';
-          window.update = update;
-  </script>
-  <script nomodule src="scripts/main-es5.js"></script>
-  -->
 </body>
 
 </html>

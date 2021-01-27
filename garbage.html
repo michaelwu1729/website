@@ -1,40 +1,159 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fun with HTML Tags</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Michael Wu's 134B HTML Website" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="Michael Wu" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Wu's Website</title> 
+  <link href="images/lul_prof_pic.png" rel="icon" />
+  <style> 
+    table, th, td {
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
      <h1>Fun with HTML Tags</h1> 
-     
+  </header>
 
-    <h2>UCSD Images</h2>
-    <section class="img">
-            <img src="images/bear.png" alt="Warren Bear" height="430" width="700" />
-            <img src="images/triton.jpg" alt="Triton" height="430" width="700" />
-            <a href="https://ucsd.edu" target="_blank"><img src="images/ucsd.gif" alt="UCSD" height="177"
-                    width="700"></a>
-            <br />
-            <section id="links">
-                    <h2>Useful Links</h2>
-                    <ul>
-                            <li><a href="http://tritonlink.ucsd.edu">TritonLink</a></li>
-                            <li><a href="http://canvas.ucsd.edu">Canvas</a></li>
-                            <li><a href="http://w3.org">W3</a></li>
-                    </ul>
-            </section>
+  <main>
+    (Note to graders: you can verify I used the tags by using the github repo linked in the report or by using DevTools. I suggest the github repo
+    since it'll be easier to read).
 
-    <section class="video">
-            <h2>UCSD Promo Video</h2>
-            <video controls height="250" width="500">
-                    <source src="videos/DMSP_Final.mp4" type="video/mp4">
-                    <div class="error">Your browser does not support the video tag.</div>
-            </video>
-    </section>
-            <br />
+    <p>(Using the em tag) I like to repeat things for <em>emphasis! EMPHASIS!</em> -Josh Nichols </p>
 
-    </section>
+    <p>Here we draw a yellow circle with a green outline, using the svg tag. </p>
+    <svg width="100" height="100">
+      <circle cx="50" cy="50" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
     
-  </body>
+    
+    <p>This is how I markup <span style="color:blue">text</span> inline using span (whereas 'div' is meant to markup whole containers)</p>
+    
+    <p>(Using the strong tag) That guy is so good, I mean <strong>SO good</strong>, at making philly cheese steaks.</p>
+    
+    <p>Here I'm writing code with the code tag: <code>print('hello world')</code></p>
+    
+    <p><pre> Here I'm
+    writing using the pre
+   tag. Easy to hard-format
+     text, but inflexible to window change sizes.</pre></p>
+    
+    <picture>
+      <p>Here I use the picture tag to mess with what comes up below based on the window width</p>
+      <source media="(min-width:700px)" srcset="images/ucsd-logo-1.jpg">
+      <img src="images/lul_prof_pic.png" alt="An image of my face is supposed to be here">
+    </picture>
+
+    <div class="template-ctr">
+      <p>Here I use the template tag + javascript to make an image appear. (Image appears at the bottom of the webpage)</p>
+      <button onclick="showContent()">Show hidden picture</button>
+      <template>
+        <h3>Image</h3>
+        <img src="images/lul_prof_pic.png" alt="An image of my face is supposed to appear here">
+      </template>
+    </div>
+    <script>
+      function showContent() {
+        var temp = document.getElementsByTagName("template")[0];
+        var clon = temp.content.cloneNode(true);
+        document.body.appendChild(clon);
+      }
+    </script>
+
+    <p>Below I use the iframe tag to show the UCSD website</p>
+    <iframe src="http://ucsd.edu" title="UCSD Website" width=500 height=300></iframe>
+
+    <p> Here is me using the audio controls (this is the audio-only version of <a href="dmsp_final">my tennis money structure video</a></p>
+    <audio controls>
+      <source src="videos/DMSP_Final.mp4" type="audio/mpeg">
+    </audio>
+
+    <p> Here is me using the ol tag. My top 3 favorite prime numbers between 1 and 100: </p>
+    <ol>
+      <li> <strong>2</strong>, because 2 is dope and the only even prime number. </li>
+      <li> <strong>19</strong>, because it's the prime number closest to my current age.
+      <li> <strong>97</strong>, because it's the largest number of the set (and closest to the number of digits of pi I was able to memorize at one point). 
+    </ol>
+
+    <p>Here is me using the optgroup, form, and option tags making a dropdown menu. Pressing Submit will take you to Google</p>
+    <form action="http://google.com">
+      <label for="items">Choose an item from the dropdown menu:</label>
+        <select name="items" id="items">
+          <optgroup label="Item Group A">
+            <option value="item-a1">Item A1</option>
+            <option value="item-a2">Item A2</option>
+          </optgroup>
+          <optgroup label="Item Group B">
+            <option value="item-b1">Item B1</option>
+            <option value="item-b2">Item B2</option>
+          </optgroup>
+        </select>
+      
+      <input type="submit" value="Submit">
+    </form>
+   
+    <p> Here I use the datalist tag</p>
+    <label for="items">Choose an item from the dropdown menu:</label>
+      <input list="itemlist" name="items" id="items">
+        <datalist id="itemlist">
+          <option value="item-a1">
+          <option value="item-a2">
+          <option value="item-b1">
+          <option value="item-b2">
+        </datalist>
+      </select>
+      
+    <p>Here I use the textarea tag</p>
+    <textarea id="big-textbox" rows="4" cols="100">
+      Here's a very large text box. Probably won't parse html tags like <b>bold</b> or <i>italics</i>.
+    </textarea>
+
+    <p>Here I use the summary and details tags </p>
+    <details>
+      <summary>Large</summary>
+      <p>Large is the biggest of the sizes small, medium, and large.</p>
+    </details>
+
+    <p>Here I build a table using the table, tr, td, and th tags. I'll try to include a caption tag here too. 
+    Also adding style for col, colgroup where it can be done</p>
+    <table>
+      <caption>Sample Table</caption>
+      <colgroup>
+        <col span="1" style="background-color:green">
+        <col style="background-color:blue">
+      </colgroup>
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+      </tr>
+      <tr>
+        <td>R1, C1</td>
+        <td>R1, C2</td>
+      </tr>
+      <tr>
+        <td>R2, C1</td>
+        <td>R2, C2</td>
+      </tr>
+    </table>
+
+    <p> Lastly, I'll build a figure to use the figure and figurecaption tags </p>
+    <figure>
+      <img src="images/lul_prof_pic.png" alt="My face should show up here">
+      <figcaption>Fig 1 - It me</figcaption>
+    <figure>
+    
+    <br /><br />
+    <a href="index">Home</a>
+  </main>
+  
+  <footer>
+    <hr/>
+    <i><b>Designed by Michael Wu</b></i>
+  </footer>
+</body>
 </html>
