@@ -2,100 +2,70 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="description" content="Simple demo Web page for CSE 134B" />
-	<meta name="keywords" content="HTML, CSS, JavaScript" />
-	<meta name="author" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>CSE 134B Homework 1 Website</title>
-	<link href="images/favicon.ico" rel="icon" />
-	<link href="styles/main.css" rel="stylesheet" />
-	<script>
-		window.addEventListener('load', function () {
-			let time = window.performance.timing,
-				complete = time.domComplete - time.domLoading;
-			document.getElementById('page-load-info').innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
-			 on ${new Date().toLocaleString("en-US")}</strong>`;
-		});
-	</script>
+  <meta charset="utf-8" />
+  <meta name="description" content="Michael Wu's 134B HTML Website" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="Michael Wu" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Wu's Website</title> 
+  <link href="images/lul_prof_pic.png" rel="icon" /> 
 </head>
 
 <body>
-	<header>
-		<h1>CSE 134B Homework 1 Website</h1>
-		
-		<section id="user-info-component">
-			<div id="user-info" style="display: none;">
-				<output id="name-info">&nbsp;</output>
-				<br />
-				<output id="major-info">&nbsp;</output>
-				<hr />
-				<br />
-				<!-- Inline Javascript Handlers used here for demonstration only -->
-				<section class="intro-text">
-					<label>My name is <input id="name-input" type="text" autocomplete="name" autofocus maxlength="30" placeholder="Your Name"></label>
-					<br />
-					<label>My major is <input id="major-input" type="text" maxlength="30" placeholder="Your Major"></label>
-				</section>
-	
-				<button onclick="window.update();">Update</button>
-			</div>
-			<script>
-				document.getElementById('user-info').style.display = 'block';
-			</script>
-			<noscript class="error">Error: JavaScript is disabled or blocked.</noscript>
-		</section>
+  <header>
+    <h1>Michael Wu's Website</h1>
+  </header>
 
+  <main>
+    <img src="images/lul_prof_pic.png" alt="error producing image">
+    <section id="intro">
+      <h2>About Me</h2>
+      Hello, and welcome to my page! I'm an undergraduate CS student at UCSD. In my free time you'll 
+      find me out on the tennis court, <del> in the gym </del>, on Twitch, or critiquing boba shops
+      across the Bay Area.
 
-		<section id="page-load-component">
-			<div id="load-info" style="display: none;">
-				<output id="page-load-info">Measuring...</output>
-			</div>
-			<script>
-				document.getElementById('load-info').style.display = 'block';
-			</script>
-			<noscript class="error">Error: JavaScript required for page timing measurement </noscript>
-		</section>
-	</header>
+      <h2>My Work</h2>
+      Here are some links to my previous works (almost all of these are software endeavors;
+      but you'll also find some non-software work I thought were cool enough to publish here)
+      <ul>
+        <li><a href="http://github.com/michaelwu1729/Deep-Learning-Papers/blob/main/RNNs_Caption_Generation.pdf" 
+            target="_blank">Deep Learning: RNNs for Generating Image Captions</a> <i>-Dec 2020</i></li>
+        <li><a href="http://github.com/michaelwu1729/Deep-Learning-Papers/blob/main/CNNs_Image_Identification.pdf" 
+            target="_blank">Deep Learning: CNNs for Image Identification</a> <i>-Nov 2020</i></li>
+        <li><a href="dmsp_final">Fixing the Lopsided Money Structure in Professional Tennis</a> <i>-Aug 2019</i></li>
 
-	<main>
-		<h2>UCSD Images</h2>
-		<section class="img">
-			<img src="images/bear.png" alt="Warren Bear" height="430" width="700" />
-			<img src="images/triton.jpg" alt="Triton" height="430" width="700" />
-			<a href="https://ucsd.edu" target="_blank"><img src="images/ucsd.gif" alt="UCSD" height="177"
-				width="700"></a>
-			<br />
-			<section id="links">
-				<h2>Useful Links</h2>
-				<ul>
-					<li><a href="http://tritonlink.ucsd.edu">TritonLink</a></li>
-					<li><a href="http://canvas.ucsd.edu">Canvas</a></li>
-					<li><a href="http://w3.org">W3</a></li>
-				</ul>
-			</section>
+      </ul>
+    <section id="links">
+      <h2>Social Media</h2>
+      Here are some of the places you can find me. Feel free to connect with me!
+      <ul>
+        <li><a href="http://github.com/michaelwu1729/" target="_blank">GitHub</a></li>
+        <li><a href="http://linkedin.com/in/michael-wu-0ba43a173/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
 
-		<section class="video">
-			<h2>UCSD Promo Video</h2>
-			<video controls height="393" width="700">
-				<source src="videos/videoplayback.mp4" type="video/mp4" />
-				<div class="error">Your browser does not support the video tag.</div>
-			</video>
-		</section>
-			<br />
+    <section id="Fun other sites">
+      <h2 color="red">Fun pages</h2> 
+      Here are some fun utility pages I built. Please be patient with these- the functionality for these are still in development!
+      <ul>
+        <li><a href="404">Reasons I'm awesome</a></li>
+        <li><a href="garbage">Some fun HTML experiments</a></li>
+        <li><a href="calculator">Final Grade Calculator (Incomplete)</a></li>
+      </ul>
+    </section>
 
-		</section>
-	</main>
-
-	<footer>
-		<hr/>
-		<p>💯This page was made with &hearts; by YOUR NAME HERE 💯</p>
-	</footer>
-	<script type="module">
-		import { update } from './scripts/main.js';
-		window.update = update;
-	</script>
-	<script nomodule src="scripts/main-es5.js"></script>
+  </main>
+  <footer>
+    <hr/>
+    <i><b>Designed by Michael Wu</b></i>
+  </footer>
+<!--
+  <script type="module">
+          import { update } from './scripts/main.js';
+          window.update = update;
+  </script>
+  <script nomodule src="scripts/main-es5.js"></script>
+  -->
 </body>
 
 </html>

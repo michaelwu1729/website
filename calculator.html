@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Michael Wu's 134B HTML Website" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="Michael Wu" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Wu's Website</title> 
+  <link href="images/lul_prof_pic.png" rel="icon" />
+</head>
+
+<body>
+  <header>
+    <h1> Non-functional Calculator </h1>
+  </header>
+
+  <main>
+    <!-- A calculator for final grade, similar to rogerhub -->
+    <section id="non-functional calculator">
+      <fieldset>
+        <legend><h3>This calculator does NOT work yet.</h3></legend>
+        <label for="curr-grade">My current grade is:</label> 
+        <input id="curr-grade" type="number" autofocus>% <br />
+        <label for="target-grade">The grade I want is:</label>
+        <input id="target-grade" type="number">%</label> <br />
+        <label for="final-weight">My final is worth:</label>
+        <input id="final-weight" type="number" min="0" max=100">% of my grade</label> <br />
+        <button onclick="calculateGrade()">Go!</button>
+      </fieldset>
+    </section>
+   
+    <script>
+      function calculateGrade() { <!-- TODO: The function for calculating the expected final grade -->
+        alert("This button works");
+        var curr_grade = document.getElementById("curr-grade").value + 2;
+      }
+    </script>
+    
+    <br /><br />
+    <a href="index">Home</a>
+  </main>
+ 
+  <footer>
+    <hr/>
+    <i><b>Designed by Michael Wu</b></i>
+  </footer>
+</body>
+
+</html>
