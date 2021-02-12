@@ -1,0 +1,72 @@
+/* Css shared by all my html files */
+@keyframes entrance-body {
+  0% {color: darkgrey; }
+  100% {color: black; }
+}
+
+@keyframes entrance-headers {
+  0% {color: darkgrey; }
+  100% {color: gold; }
+}
+
+@keyframes entrance-links {
+  0% {color: darkgrey; }
+  100% {color: blue; }
+}
+
+body {
+  background-color: darkgrey;
+  font-family: "Garamond", "Times New Roman", serif;
+  margin: 10px;
+}
+
+body * {
+  animation-duration: 2s;
+  animation-name: entrance-body; 
+}
+
+h1 {
+  color: gold;
+  animation-duration: 1s;
+  animation-name: entrance-headers; 
+  text-align: center;
+  outline: 3px solid black;
+}
+
+h2 {
+  color: gold;
+  animation-duration: 1s;
+  animation-name: entrance-headers; 
+  font-family: "Serif", serif;
+  margin-bottom: 3px;
+  padding-left: 10px;
+}
+
+a {
+  color: blue;
+  animation-duration: 2s;
+  animation-name: entrance-links; 
+}
+
+-p {
+  color: white;
+}
+
+footer {
+  text-align: center;
+}
+
+footer designmsg {
+  -font-style: italic;
+  font-weight: bold;
+}
+
+footer nav {
+  font-size: 32px;
+}
+
+footer nav a img {
+  width: 32px;
+  height: 32px;
+}
+
